@@ -1,5 +1,0 @@
-markdown: rdiscount
-pygments: true
-auto: true
-paginate: 20
-baseurl: /notes
