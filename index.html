@@ -1,0 +1,29 @@
+---
+layout: default
+title: Notes
+---
+<div id="home">
+    <ul id="archive">
+        {% for post in paginator.posts %}
+        <li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: '%d %b %Y' }}
+            </time>
+            —
+            <span class="description">
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </span>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div id="pagination">
+        {% if paginator.page > 1 %}
+        <a href="/page{{ paginator.previous_page }}">&laquo; previous</a>
+        {% endif %}
+
+        {% if paginator.page < paginator.total_pages %}
+        <a href="/page{{ paginator.next_page }}">next &raquo;</a>
+        {% endif %}
+    </div>
+</div>
