@@ -44,7 +44,23 @@ ul {
 }
 
 li {
+    line-height: 1.5em;
+}
+
+#archive li {
     list-style-type: none;
+    line-height: 2em;
+}
+
+#archive time {
+    width: 6em;
+    display: inline-block;
+    text-align: right;
+}
+
+article ul {
+    padding-left: 1em;
+    list-style-type: square;
 }
 
 time {
